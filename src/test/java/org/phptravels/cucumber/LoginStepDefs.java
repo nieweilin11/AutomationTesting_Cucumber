@@ -1,5 +1,6 @@
 package org.phptravels.cucumber;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -38,5 +39,13 @@ public class LoginStepDefs extends AbstractStepDefs {
         }
     }
 
+    @And("Click sideMenu")
+    public void clickSideMenu() {
+        itemPage.getSideMenu().click();
+    }
 
+    @Then("Click Logout")
+    public void clickLogout() {
+        itemPage.getLogout().click();
+    }
 }

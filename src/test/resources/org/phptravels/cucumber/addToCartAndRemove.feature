@@ -3,7 +3,8 @@ Feature: Add  products to cart and remove test
   Background:
     Given the home page is opened
     Then fill in the 'standard_user' and 'secret_sauce' address
-        When  click the Login button
+    When  click the Login button
+    Given the Item page is opened
 
 
   Scenario Outline:

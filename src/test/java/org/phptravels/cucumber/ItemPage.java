@@ -6,13 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class ItemPage {
-    private WebDriver driver;
-
-    public ItemPage(WebDriver driver) {
-        this.driver = driver;
-    }
-
+    private final WebDriver driver;
     private static final String PAGE_URL = "https://www.saucedemo.com/inventory.html";
+
     @FindBy(id ="add-to-cart-sauce-labs-backpack")
     private WebElement addSauceLabsBackpack;
     @FindBy(id ="remove-sauce-labs-backpack")
@@ -57,8 +53,22 @@ public class ItemPage {
 
     @FindBy(xpath = "//*[@id=\"shopping_cart_container\"]/a")
     private WebElement cartIcon;
+
     @FindBy(id ="react-burger-menu-btn")
     private WebElement sideMenu;
+
+
+    @FindBy(id = "logout_sidebar_link")
+    private WebElement logout;
+
+
+    public ItemPage(WebDriver driver) {
+        this.driver = driver;
+    }
+    public void openPage() {
+        driver.get(PAGE_URL);
+        PageFactory.initElements(driver, this);
+    }
     public WebElement getAddSauceLabsBackpack() {
         return addSauceLabsBackpack;
     }
@@ -137,6 +147,10 @@ public class ItemPage {
 
     public WebElement getSideMenu() {
         return sideMenu;
+    }
+
+    public WebElement getLogout() {
+        return logout;
     }
 
 

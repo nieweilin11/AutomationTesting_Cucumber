@@ -14,6 +14,8 @@ public abstract class AbstractStepDefs {
 
     protected static HomePage homePage;
     protected static ItemPage itemPage;
+    protected static CheckoutPage checkoutPage;
+    protected static CheckoutStep2Page checkoutStep2Page;
 
     static {
         WebDriverManager.firefoxdriver().setup();
@@ -21,6 +23,9 @@ public abstract class AbstractStepDefs {
         driver.manage().timeouts().implicitlyWait(WAIT_TIME, TimeUnit.SECONDS);
         homePage = new HomePage(driver);
         itemPage = new ItemPage(driver);
+        checkoutPage =new CheckoutPage(driver);
+        checkoutStep2Page = new CheckoutStep2Page(driver);
+
     }
 
 }

@@ -26,4 +26,11 @@ Feature: Login test
     When  click the Login button
     Then the '<feedback>' error message is shown out
 
+  Scenario: Logout
+    Given fill in the 'standard_user' and 'secret_sauce' address
+    And  click the Login button
+    Given the Item page is opened
+    And Click sideMenu
+    Then Click Logout
+
 
