@@ -24,8 +24,9 @@ Feature: Add  products to cart and remove test
   Scenario: Empty cart
    Given Click cart icon
 
-  Scenario: Choose all product
-    Given Click all product's add button
+  Scenario: Click add and remove
+    Given Click 'SauceLabsBackpack' button add item
+    And Click 'SauceLabsBackpack' button remove item
     Then Click cart icon
 
   Scenario:  Choose all product and remove them
@@ -33,7 +34,9 @@ Feature: Add  products to cart and remove test
     And Click all product's remove button
     Then Click cart icon
 
-    Scenario: Click add and remove
-      Given Click 'SauceLabsBackpack' button add item
-      And Click 'SauceLabsBackpack' button remove item
-      Then Click cart icon
+  Scenario: Choose all product
+    Given Click all product's add button
+    Then Click cart icon
+
+
+

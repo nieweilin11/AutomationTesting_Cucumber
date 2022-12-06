@@ -105,10 +105,6 @@ public class ItemPage {
         PageFactory.initElements(driver, this);
     }
 
-    public void openDetailPage(String url) {
-        driver.get(url);
-        PageFactory.initElements(driver, this);
-    }
 
     public WebElement getAddSauceLabsBackpack() {
         return addSauceLabsBackpack;

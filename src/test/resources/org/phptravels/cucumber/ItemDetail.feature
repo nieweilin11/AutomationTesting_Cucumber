@@ -16,12 +16,14 @@ Feature: Item detail system test
       | SauceLabsOnesie      |
       | T_ShirtRed           |
 
+  Scenario: remove 'SauceLabsBackpack' form it's detail page
+    Given Click 'SauceLabsBackpack'
+    And Click add button
+    Then Click remove button
+
     Scenario: add 'SauceLabsBackpack' form it's detail page
       Given Click 'SauceLabsBackpack'
       And Click add button
       Then Click cart icon
 
-    Scenario: remove 'SauceLabsBackpack' form it's detail page
-      Given Click 'SauceLabsBackpack'
-      And Click add button
-      Then Click remove button
+

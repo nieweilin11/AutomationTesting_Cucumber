@@ -17,6 +17,13 @@ Feature: Login system test
       | standard_user |              | Epic sadface: Password is required                                        |
 
 
+  Scenario: Logout
+    Given fill in the 'standard_user' and 'secret_sauce' address
+    And  click the Login button
+    Given the Item page is opened
+    And Click sideMenu
+    Then Click Logout
+
   Scenario: successful Login
     Given fill in the 'standard_user' and 'secret_sauce' address
     When  click the Login button
@@ -26,11 +33,5 @@ Feature: Login system test
     When  click the Login button
     Then the 'Epic sadface: Sorry, this user has been locked out.' error message is shown out
 
-  Scenario: Logout
-    Given fill in the 'standard_user' and 'secret_sauce' address
-    And  click the Login button
-    Given the Item page is opened
-    And Click sideMenu
-    Then Click Logout
 
 

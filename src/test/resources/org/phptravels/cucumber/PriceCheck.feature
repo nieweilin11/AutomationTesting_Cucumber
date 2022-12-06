@@ -16,7 +16,7 @@ Feature: Price system test
     Given the checkout Step2 page is opened
     And  Check the '<price>' of '<item>'
     Then Click Finish button
-#    Then the '<feedback>' error message is shown out
+
     Examples:
       | item                 | price |
       | SauceLabsBackpack    | 29.99 |
