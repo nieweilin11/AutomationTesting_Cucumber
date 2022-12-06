@@ -15,6 +15,8 @@ public class ItemPage {
     private WebElement removeSauceLabsBackpack;
     @FindBy(xpath = "/html/body/div/div/div/div[2]/div/div/div/div[1]/div[2]/div[2]/div")
     private WebElement priceSauceLabsBackpack;
+    @FindBy(xpath = "/html/body/div/div/div/div[2]/div/div/div/div[1]/div[2]/div[1]/a/div")
+    private WebElement detailSauceLabsBackpack;
 
 
     @FindBy(id ="add-to-cart-sauce-labs-bike-light")
@@ -23,6 +25,8 @@ public class ItemPage {
     private WebElement removeSauceLabsBikeLight;
     @FindBy(xpath = "/html/body/div/div/div/div[2]/div/div/div/div[2]/div[2]/div[2]/div")
     private WebElement priceSauceLabsBikeLight;
+    @FindBy(xpath = "/html/body/div/div/div/div[2]/div/div/div/div[2]/div[2]/div[1]/a/div")
+    private WebElement detailSauceLabsBikeLight;
 
 
     @FindBy(id ="add-to-cart-sauce-labs-bolt-t-shirt")
@@ -31,14 +35,18 @@ public class ItemPage {
     private WebElement removeSauceLabsBoltT_Shirt;
     @FindBy(xpath ="/html/body/div/div/div/div[2]/div/div/div/div[3]/div[2]/div[2]/div")
     private WebElement priceSauceLabsBoltT_Shirt;
+    @FindBy(xpath = "/html/body/div/div/div/div[2]/div/div/div/div[3]/div[2]/div[1]/a/div")
+    private WebElement detailSauceLabsBoltT_Shirt;
 
 
     @FindBy(id ="add-to-cart-sauce-labs-fleece-jacket")
     private WebElement addSauceLabsFleeceJacket;
     @FindBy(id ="remove-sauce-labs-fleece-jacket")
-    private WebElement removeSauceLabsFleeceJacket ;
+    private WebElement removeSauceLabsFleeceJacket;
     @FindBy(xpath ="/html/body/div/div/div/div[2]/div/div/div/div[4]/div[2]/div[2]/div")
-    private WebElement priceSauceLabsFleeceJacket ;
+    private WebElement priceSauceLabsFleeceJacket;
+    @FindBy(xpath = "/html/body/div/div/div/div[2]/div/div/div/div[4]/div[2]/div[1]/a/div")
+    private WebElement detailSauceLabsFleeceJacket;
 
 
     @FindBy(id ="add-to-cart-sauce-labs-onesie")
@@ -47,6 +55,8 @@ public class ItemPage {
     private WebElement removeSauceLabsOnesie ;
     @FindBy(xpath ="/html/body/div/div/div/div[2]/div/div/div/div[5]/div[2]/div[2]/div")
     private WebElement priceSauceLabsOnesie ;
+    @FindBy(xpath = "/html/body/div/div/div/div[2]/div/div/div/div[5]/div[2]/div[1]/a/div")
+    private WebElement detailSauceLabsOnesie;
 
 
     @FindBy(id ="add-to-cart-test.allthethings()-t-shirt-(red)")
@@ -55,6 +65,9 @@ public class ItemPage {
     private WebElement removeT_ShirtRed;
     @FindBy(xpath ="/html/body/div/div/div/div[2]/div/div/div/div[6]/div[2]/div[2]/div")
     private WebElement priceT_ShirtRed;
+
+    @FindBy(xpath = "/html/body/div/div/div/div[2]/div/div/div/div[6]/div[2]/div[1]/a/div")
+    private WebElement detailT_ShirtRed;
 
 
     @FindBy(xpath = "//*[@id=\"shopping_cart_container\"]/a")
@@ -79,6 +92,9 @@ public class ItemPage {
     @FindBy(xpath = "//*[@id=\"logout_sidebar_link\"]")
     private WebElement logout;
 
+    @FindBy(xpath = "//*[@id=\"back-to-products\"]")
+    private WebElement itemDetailBack;
+
 
     public ItemPage(WebDriver driver) {
         this.driver = driver;
@@ -86,6 +102,11 @@ public class ItemPage {
 
     public void openPage() {
         driver.get(PAGE_URL);
+        PageFactory.initElements(driver, this);
+    }
+
+    public void openDetailPage(String url) {
+        driver.get(url);
         PageFactory.initElements(driver, this);
     }
 
@@ -188,5 +209,34 @@ public class ItemPage {
     public WebElement getAboutUs() {
         return aboutUs;
     }
+
+    public WebElement getDetailSauceLabsBackpack() {
+        return detailSauceLabsBackpack;
+    }
+
+    public WebElement getDetailSauceLabsBikeLight() {
+        return detailSauceLabsBikeLight;
+    }
+
+    public WebElement getDetailSauceLabsBoltT_Shirt() {
+        return detailSauceLabsBoltT_Shirt;
+    }
+
+    public WebElement getDetailSauceLabsFleeceJacket() {
+        return detailSauceLabsFleeceJacket;
+    }
+
+    public WebElement getDetailSauceLabsOnesie() {
+        return detailSauceLabsOnesie;
+    }
+
+    public WebElement getDetailT_ShirtRed() {
+        return detailT_ShirtRed;
+    }
+
+    public WebElement getItemDetailBack() {
+        return itemDetailBack;
+    }
+
 
 }

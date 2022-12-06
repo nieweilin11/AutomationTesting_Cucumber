@@ -3,7 +3,7 @@ package org.phptravels.cucumber;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
-public class addToCartAndRemoveStepDefs extends AbstractStepDefs {
+public class CartStepDefs extends AbstractStepDefs {
 
     @Given("the Item page is opened")
     public void the_item_page_is_opened() {

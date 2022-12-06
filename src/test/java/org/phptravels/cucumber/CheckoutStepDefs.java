@@ -4,7 +4,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
-public class CheckoutPageStepDefs extends AbstractStepDefs{
+public class CheckoutStepDefs extends AbstractStepDefs{
 
     @Given("the Checkout page is opened")
     public void the_checkout_page_is_opened() {
