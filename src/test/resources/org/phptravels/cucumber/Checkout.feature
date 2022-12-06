@@ -1,4 +1,4 @@
-Feature: Login test
+Feature: Checkout system test
 
   Background:
     Given the home page is opened
@@ -32,3 +32,4 @@ Feature: Login test
     Then Click Continue Button
     Given the checkout Step2 page is opened
     Then Click Finish button
+

@@ -16,12 +16,14 @@ public class ItemPage {
     @FindBy(xpath = "/html/body/div/div/div/div[2]/div/div/div/div[1]/div[2]/div[2]/div")
     private WebElement priceSauceLabsBackpack;
 
+
     @FindBy(id ="add-to-cart-sauce-labs-bike-light")
     private WebElement addSauceLabsBikeLight;
     @FindBy(id ="remove-sauce-labs-bike-light")
     private WebElement removeSauceLabsBikeLight;
     @FindBy(xpath = "/html/body/div/div/div/div[2]/div/div/div/div[2]/div[2]/div[2]/div")
     private WebElement priceSauceLabsBikeLight;
+
 
     @FindBy(id ="add-to-cart-sauce-labs-bolt-t-shirt")
     private WebElement addSauceLabsBoltT_Shirt;
@@ -30,12 +32,14 @@ public class ItemPage {
     @FindBy(xpath ="/html/body/div/div/div/div[2]/div/div/div/div[3]/div[2]/div[2]/div")
     private WebElement priceSauceLabsBoltT_Shirt;
 
+
     @FindBy(id ="add-to-cart-sauce-labs-fleece-jacket")
     private WebElement addSauceLabsFleeceJacket;
     @FindBy(id ="remove-sauce-labs-fleece-jacket")
     private WebElement removeSauceLabsFleeceJacket ;
     @FindBy(xpath ="/html/body/div/div/div/div[2]/div/div/div/div[4]/div[2]/div[2]/div")
     private WebElement priceSauceLabsFleeceJacket ;
+
 
     @FindBy(id ="add-to-cart-sauce-labs-onesie")
     private WebElement addSauceLabsOnesie ;
@@ -44,6 +48,7 @@ public class ItemPage {
     @FindBy(xpath ="/html/body/div/div/div/div[2]/div/div/div/div[5]/div[2]/div[2]/div")
     private WebElement priceSauceLabsOnesie ;
 
+
     @FindBy(id ="add-to-cart-test.allthethings()-t-shirt-(red)")
     private WebElement addT_ShirtRed;
     @FindBy(id ="remove-test.allthethings()-t-shirt-(red)")
@@ -51,24 +56,39 @@ public class ItemPage {
     @FindBy(xpath ="/html/body/div/div/div/div[2]/div/div/div/div[6]/div[2]/div[2]/div")
     private WebElement priceT_ShirtRed;
 
+
     @FindBy(xpath = "//*[@id=\"shopping_cart_container\"]/a")
     private WebElement cartIcon;
 
-    @FindBy(id ="react-burger-menu-btn")
+    @FindBy(xpath = "//*[@id=\"react-burger-menu-btn\"]")
     private WebElement sideMenu;
 
+    @FindBy(xpath = "/html/body/div/div/footer/ul/li[3]/a")
+    private WebElement linkedin;
 
-    @FindBy(id = "logout_sidebar_link")
+    @FindBy(xpath = "/html/body/div/div/footer/ul/li[1]/a")
+    private WebElement twitch;
+
+    @FindBy(xpath ="/html/body/div/div/footer/ul/li[2]/a")
+    private WebElement facebook;
+
+    @FindBy(xpath = "//*[@id=\"about_sidebar_link\"]")
+    private WebElement aboutUs;
+
+
+    @FindBy(xpath = "//*[@id=\"logout_sidebar_link\"]")
     private WebElement logout;
 
 
     public ItemPage(WebDriver driver) {
         this.driver = driver;
     }
+
     public void openPage() {
         driver.get(PAGE_URL);
         PageFactory.initElements(driver, this);
     }
+
     public WebElement getAddSauceLabsBackpack() {
         return addSauceLabsBackpack;
     }
@@ -153,5 +173,20 @@ public class ItemPage {
         return logout;
     }
 
+    public WebElement getLinkedin() {
+        return linkedin;
+    }
+
+    public WebElement getTwitch() {
+        return twitch;
+    }
+
+    public WebElement getFacebook() {
+        return facebook;
+    }
+
+    public WebElement getAboutUs() {
+        return aboutUs;
+    }
 
 }

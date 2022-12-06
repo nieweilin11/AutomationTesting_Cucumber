@@ -25,7 +25,6 @@ public abstract class AbstractStepDefs {
         itemPage = new ItemPage(driver);
         checkoutPage =new CheckoutPage(driver);
         checkoutStep2Page = new CheckoutStep2Page(driver);
-
     }
 
 }

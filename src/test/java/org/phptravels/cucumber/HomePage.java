@@ -22,17 +22,6 @@ public class HomePage {
     @FindBy(id ="login-button")
     private WebElement loginButton;
 
-
-
-
-
-
-//    @FindBy(xpath ="")
-//    private WebElement ;
-//    @FindBy(id ="")
-//    private WebElement ;
-
-
     private final WebDriver driver;
 
     public HomePage(WebDriver driver) {
@@ -78,6 +67,4 @@ public class HomePage {
     public WebElement getPasswordField() {
         return passwordField;
     }
-
-
 }
